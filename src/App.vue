@@ -1,5 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+<AppHeader/>
   <p>
     <!-- use the router-link component for navigation. -->
     <!-- specify the link by passing the `to` prop. -->
@@ -23,12 +23,15 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import Demo from './components/Demo.vue';
+import AppHeader from './components/Header.vue';
+
 import {ref, reactive, watch} from 'vue';
 
 export default {
   name: 'App',
   components: {
     //HelloWorld,
+    AppHeader,
     Demo
   },
   setup(){

@@ -29,21 +29,21 @@ const routes = [
     }
   },
     { path: '/user/:id', component: About },
-    {
-      path: "*",
-      component: Home 
-    },
+    // {
+    //   path: "*",
+    //   component: Home 
+    // },
   ]
 
   //GLOBAl
 
-  router.beforeEach((to, from) => {
-    console.log('check user')
-    return true
-  })
-  router.afterEach((to, from) => {
-    //sendToAnalytics
-  })
+  // router.beforeEach((to, from) => {
+  //   console.log('check user')
+  //   return true
+  // })
+  // router.afterEach((to, from) => {
+  //   //sendToAnalytics
+  // })
   
   const router = createRouter({
     history: createWebHashHistory(), //createMemoryHistory()

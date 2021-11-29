@@ -1,9 +1,20 @@
 <template>
   <!-- Home -->
-  <h1>{{SIMPLECONST}}</h1>
+  <h1>{{foo}}</h1>
+
+
+<p v-custom-color="abv" color="pink" size="34">{{capitalise('some text')}}
+</p>
+
+<p v-custom-color="abv" color="white" size="14">some text</p>
+
+<p v-custom-color color="blue">{{capitalise('some text')}}</p>
+
+
+
     <form>
   name: <input v-model="name"/> ({{fooBar}})<br>
-  lastname: <input v-model="lastname"/><br>
+  lastname: <input v-model="lastname" v-focus/><br>
 
   <button @click="send"
             v-bind:disabled="!valid"
@@ -31,7 +42,7 @@ export default {
     // }),
     //v3
     //
-    setup(props){
+    setup(){
           
         const {  name, lastname,
                 fullName, nameLength, valid} = useName(3)
