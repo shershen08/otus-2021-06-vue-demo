@@ -1,15 +1,41 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <p>
+    <!-- use the router-link component for navigation. -->
+    <!-- specify the link by passing the `to` prop. -->
+    <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
+    <router-link to="/">Go to Home</router-link>
+    <router-link to="/about">Go to About</router-link>
+    <router-link to="/user/43">Go user 43</router-link>
+  </p>
+  <!-- route outlet -->
+  <!-- component matched by the route will render here -->
+  <router-view></router-view>
+
+
+  <hr>
+  footer
+  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <!-- <Demo/> -->
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import Demo from './components/Demo.vue';
+import {ref, reactive, watch} from 'vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    //HelloWorld,
+    Demo
+  },
+  setup(){
+    
+    return {
+
+    }
   }
 }
 </script>
